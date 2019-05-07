@@ -2,6 +2,7 @@
     <head>
       <link rel="stylesheet" type="text/css" href="main.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
 <body>
   <!-- <form>
@@ -100,8 +101,14 @@
         <button onclick="typeWriter()">Get Text Message For Loved One</button>
         <br>
         <div id="demo" style="text-align: center">Message: </div>
-        <textarea type="text" placeholder="Copy and Paste Message Here" style="width: 420px; height: 300px;"></textarea>
-        <div class="trigger-btn"><button class="submit">Sent Text Message</button></div>
+        <textarea id="userMessage" type="text" placeholder="Copy and Paste Message Here" style="width: 420px; height: 300px;"></textarea>
+        
+        <br>
+        <span style="white-space:nowrap">
+            <label for="id1">Enter Telephone number:</label>
+            <input type="text" id="id1"/>
+        </span>
+        <div class="trigger-btn"><button class="submit" id="sendMessage">Sent Text Message</button></div>
       </div>
       <div class="state state-2">
         <div class="trigger-btn"><button class="submit">Back</button></div>
@@ -120,6 +127,24 @@ $('.submit').on('click',function(){
   $('.belt').toggleClass('transitioned');
   $('.state-1').toggleClass('transitioned');
 });  
+
+$('#sendMessage').on('click', () => {
+  console.log('document.getElementById(userMessage).value: ', $('#userMessage').val());
+
+  axios.post('/message', {
+    message: $('#userMessage').val(),
+    toNumber: $('id1').val()
+  })
+  // $.ajax({
+  //     url: 'http://localhost:3000/sendMessage',
+  //     method: 'POST',
+      // data: {
+      //   message: $('#userMessage').val(),
+      //   toNumber: $('id1').val()
+      // }
+  //   }
+  // )
+})
 var i = 0;
 var txt = 'Every Morning I Thank The World For Giving You To Me. You Are My Sweetest Addiction, I Can’t Live Without You.Every Morning I Thank The World For Giving You To Me. You Are My Sweetest Addiction, I Can’t Live Without You.';
 var speed = 80;
