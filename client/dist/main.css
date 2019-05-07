@@ -1,0 +1,124 @@
+body {
+  background: #4CB8C4;
+  padding: 20px;
+  font-family: "Raleway";
+}
+body .container {
+  margin: 50px auto;
+  max-width: 600px;
+  background-color: #fff;
+  overflow: hidden;
+}
+body .belt {
+  width: 200%;
+  display: flex;
+  transition: transform 1s ease-in-out;
+  background: #4CB8C4;
+}
+body .belt.transitioned {
+  transform: translateX(-50%);
+}
+body .belt .state {
+  width: 50%;
+  padding: 20px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+body .belt .state-1 {
+  transition: transform 1.5s ease-in-out;
+  transform-origin: center right;
+}
+body .belt .state-1.transitioned {
+  transform: translateX(-50%);
+}
+body .belt .state-2 {
+  transition: transform 1s ease-in-out;
+}
+body .belt .submit, body .belt input {
+  width: 300px;
+  padding: 20px;
+  border: none;
+  margin-bottom: 20px;
+}
+body .belt input {
+  outline: none;
+  border: 1px solid #bbb;
+}
+body .belt .submit {
+  background: linear-gradient(to left, #4CB8C4, #3CD3AD);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 342px;
+  box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
+  transition: all 300ms cubic-bezier(0.01, 0.01, 0.32, 2.4);
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  outline: none;
+}
+body .belt .trigger-btn:hover .submit {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.3);
+}
+body .belt h2 {
+  color: #333;
+}
+
+.heart {
+  width: 220px;
+  height: 174px;
+  margin: 0 auto;
+  top: 61%;
+  left: 50%;
+  margin: -87px 0 0 -110px;
+  position: absolute;
+  z-index: 5;
+  animation: beat 1.2s ease-in-out infinite forwards;
+}
+
+.shadow {
+  width: 140px;
+  height: 100px;
+  margin: -50px 0 0 -70px;
+  top: 61%;
+  left: 50%;
+  border-radius: 100px;
+  box-shadow: 0 0 200px 60px rgba(0, 0, 0, .7);
+  position: absolute;
+  z-index: 0;
+  animation: beat-shadow 1.2s ease-in-out infinite forwards;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: scale3d(1, 1, 1);
+  }
+  15%, 45% {
+    transform: scale3d(1.2, 1.2, 1);
+  }
+  35% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  65% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes beat-shadow {
+  0%, 100% {
+    transform: scale3d(1, 1, 1);
+  }
+  15%, 45% {
+    transform: scale3d(1.05, 1.05, 1);
+  }
+  30%, 60% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
