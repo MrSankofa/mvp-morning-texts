@@ -27447,7 +27447,7 @@ function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      axios.get('http://localhost:3000/message').then(function (response) {
+      axios.get('http://ec2-3-82-198-179.compute-1.amazonaws.com:3000/message').then(function (response) {
         console.log('response', response);
 
         _this2.setState({

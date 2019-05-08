@@ -10,7 +10,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/message')
+    axios.get('http://ec2-3-82-198-179.compute-1.amazonaws.com:3000/message')
       .then( response => {
         console.log('response', response)
         this.setState({

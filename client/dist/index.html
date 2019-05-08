@@ -132,10 +132,15 @@ $('.submit').on('click',function(){
 $('#sendMessage').on('click', () => {
   console.log('#userMessage ', $('#userMessage').val());
   console.log('toNumber: ', $('#id1').val())
-  axios.post('http://localhost:3000/message', {
+  axios.post('http://ec2-3-82-198-179.compute-1.amazonaws.com:3000/message', {
     message: $('#userMessage').val(),
     toNumber: $('#id1').val()
   })
+  
+  // axios.post('http://localhost:3000/message', {
+  //   message: $('#userMessage').val(),
+  //   toNumber: $('#id1').val()
+  // })
   // $.ajax({
   //     url: 'http://localhost:3000/sendMessage',
   //     method: 'POST',
