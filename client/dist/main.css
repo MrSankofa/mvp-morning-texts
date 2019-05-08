@@ -1,3 +1,115 @@
+@import 'https://fonts.googleapis.com/css?family=Bungee+Shade';
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+button {
+  overflow: visible;
+  border: 0;
+  padding: 0;
+}
+.btn.striped-shadow span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  border: 5px solid;
+}
+
+.btn.striped-shadow.dark span {
+  border-color: #393939;
+  background: #77bfa1;
+  color: #393939;
+  width: 200px;
+}
+
+.btn {
+  font-family: 'Bungee Shade', sans-serif;
+  height: 80px;
+  line-height: 65px;
+  display: inline-block;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 1.35rem;
+  transition: opacity .3s, z-index .3s step-end, -webkit-transform .3s;
+  transition: opacity .3s, z-index .3s step-end, transform .3s;
+  transition: opacity .3s,
+    z-index .3s step-end,
+    transform .3s,
+    -webkit-transform .3s;
+  z-index: 1;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  width: 155px;
+  height: 48px;
+  line-height: 38px;
+}
+
+button.btn.striped-shadow.dark:after, button.btn.striped-shadow.dark:before {
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 5px,
+    #393939 5px,
+    #393939 10px,
+    transparent 10px
+  );
+}
+
+button.btn.striped-shadow:hover:before {
+  max-height: calc(100% - 10px);
+}
+
+button.btn.striped-shadow:after {
+  width: calc(100% - 4px);
+  height: 8px;
+  left: -10px;
+  bottom: -9px;
+  background-size: 15px 8px;
+  background-repeat: repeat-x;
+}
+button.btn.striped-shadow:after, button.btn.striped-shadow:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  transition: max-height .3s, width .3s, -webkit-transform .3s;
+  transition: transform .3s, max-height .3s, width .3s;
+  transition: transform .3s, max-height .3s, width .3s, -webkit-transform .3s;
+}
+
+.btn.striped-shadow:hover {
+  -webkit-transform: translate(-12px, 12px);
+  -ms-transform: translate(-12px, 12px);
+  transform: translate(-12px, 12px);
+  z-index: 3;
+}
+
+button.btn.striped-shadow:hover:after, button.btn.striped-shadow:hover:before {
+  -webkit-transform: translate(12px, -12px);
+  -ms-transform: translate(12px, -12px);
+  transform: translate(12px, -12px);
+}
+button.btn.striped-shadow:before {
+  width: 8px;
+  max-height: calc(100% - 5px);
+  height: 100%;
+  left: -12px;
+  bottom: -5px;
+  background-size: 8px 15px;
+  background-repeat: repeat-y;
+  background-position: 0 100%;
+}
+
+
 body {
   background: #4CB8C4;
   padding: 20px;
@@ -21,7 +133,7 @@ body .belt.transitioned {
 body .belt .state {
   width: 50%;
   padding: 20px;
-  height: 300px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +185,7 @@ body .belt h2 {
   width: 220px;
   height: 174px;
   margin: 0 auto;
-  top: 61%;
+  top: 70%;
   left: 49%;
   margin: -87px 0 0 -110px;
   position: absolute;
@@ -85,7 +197,7 @@ body .belt h2 {
   width: 140px;
   height: 100px;
   margin: -50px 0 0 -70px;
-  top: 61%;
+  top: 70%;
   left: 49%;
   border-radius: 100px;
   box-shadow: 0 0 200px 60px rgba(0, 0, 0, .7);
@@ -120,5 +232,145 @@ body .belt h2 {
     transform: scale3d(1, 1, 1);
   }
 }
+
+.header-wrapper {
+  /* margin: 100px; */
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: "Passion One", sans-serif;
+  font-size: 40px;
+  line-height: 1;
+  display: inline-block;
+  height: 40px;
+  margin: 0 4px 0 0;
+  overflow: hidden;
+}
+h1 span.wrapper {
+  display: block;
+  animation: animate-header ease-in-out 4s;
+  animation-fill-mode: forwards;
+}
+h1 span.word {
+  display: block;
+  margin: 0 0 10px 0;
+}
+h1 span.word.a {
+  color: #fff;
+}
+h1 span.word.b {
+  color: #fff;
+}
+h1 span.word.c {
+  color: #fff;
+}
+h1 span.word.d {
+  color: #fff;
+}
+h1 span.word.e {
+  color: #fff;
+}
+h1 span.word.f {
+  color: #fff;
+}
+h1 span.word.g {
+  color: #fff;
+}
+h1 span.word.h {
+  color: #fff;
+}
+h1 span.word.i {
+  color: #fff;
+}
+h1 span.word.j {
+  color: #fff;
+}
+h1 span.word.k {
+  color: #fff;
+}
+h1 span.word.l {
+  color: #fff;
+}
+h1 span.word.m {
+  color: #fff;
+}
+h1 span.word.n {
+  color: #fff;
+}
+h1 span.word.o {
+  color: #fff;
+}
+h1 span.word.p {
+  color: #fff;
+}
+h1 span.word.q {
+  color: #fff;
+}
+h1 span.word.end {
+  color: #8a1be4;
+}
+
+@keyframes animate-header {
+  0% {
+    margin: 0 0 0 0;
+  }
+  20% {
+    margin: 0 0 0 0;
+  }
+  30% {
+    margin: -50px 0 0 0;
+  }
+  39% {
+    margin: -100px 0 0 0;
+  }
+  47% {
+    margin: -150px 0 0 0;
+  }
+  54% {
+    margin: -200px 0 0 0;
+  }
+  60% {
+    margin: -250px 0 0 0;
+  }
+  65% {
+    margin: -300px 0 0 0;
+  }
+  69% {
+    margin: -350px 0 0 0;
+  }
+  73% {
+    margin: -400px 0 0 0;
+  }
+  77% {
+    margin: -450px 0 0 0;
+  }
+  80% {
+    margin: -500px 0 0 0;
+  }
+  83% {
+    margin: -550px 0 0 0;
+  }
+  86% {
+    margin: -600px 0 0 0;
+  }
+  89% {
+    margin: -650px 0 0 0;
+  }
+  92% {
+    margin: -700px 0 0 0;
+  }
+  95% {
+    margin: -750px 0 0 0;
+  }
+  98% {
+    margin: -800px 0 0 0;
+  }
+  100% {
+    margin: -850px 0 0 0;
+  }
+}
+
+
 
 
