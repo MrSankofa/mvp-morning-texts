@@ -2,7 +2,7 @@ module.exports.morningTexts = [
   'Since I Spent The Whole Night Dreaming Of You, I Thought It Was Only Appropriate To Message You This Morning And Wake You Up', 
   'For Me, It Doesn’t Matter Whether The Morning Is Cloudy, Rainy Or Windy If I Meet It With You. Good Morning!',
   'The Bright Sun, The Smell Of Coffee, Yummy Pancakes And Your Charming Smile – This Is Everything I Need For My Perfect Morning!',
-  'Morning, Darling! I Wish You To Get Everything You Want And Deserve Today. You Deserve A Lot.',
+  'Morning, Honey! I Wish You To Get Everything You Want And Deserve Today. You Deserve A Lot.',
   'Open Your Eyes And Embrace This Wonderful World! Welcome To Another Happy Day!',
   'Every Morning I Thank The World For Giving You To Me. You Are My Sweetest Addiction, I Can’t Live Without You.',
   'You Know What? I Always Wake Up Smiling And Feeling Happy, And It’s All Your Fault! It’s All Because You Love Me, Too. Good Morning, Love!',
