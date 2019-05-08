@@ -9,7 +9,7 @@ const sendMessage = (toNumber, message) => {
   
   // Send the text message.
   client.messages.create({
-    to: toNumber,
+    to: '+1' + toNumber,
     from: '+17344363342',
     body: message
   });

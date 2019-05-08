@@ -111,6 +111,7 @@
         <div class="trigger-btn"><button class="submit" id="sendMessage">Sent Text Message</button></div>
       </div>
       <div class="state state-2">
+        <div style="text-align: center">Your Message Was Sent</div>
         <div class="trigger-btn"><button class="submit">Back</button></div>
       </div>
     </div>
@@ -127,10 +128,11 @@
   $('.state-1').toggleClass('transitioned');
 });
 $('#sendMessage').on('click', function () {
-  console.log('document.getElementById(userMessage).value: ', $('#userMessage').val());
-  axios.post('/message', {
+  console.log('#userMessage ', $('#userMessage').val());
+  console.log('toNumber: ', $('#id1').val());
+  axios.post('http://localhost:3000/message', {
     message: $('#userMessage').val(),
-    toNumber: $('id1').val()
+    toNumber: $('#id1').val()
   }); // $.ajax({
   //     url: 'http://localhost:3000/sendMessage',
   //     method: 'POST',
