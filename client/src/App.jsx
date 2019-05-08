@@ -16,7 +16,8 @@ export default class App extends React.Component {
         this.setState({
           message: response.data
         })
-      });
+      })
+      .catch( err => console.error(err))
   }
 
   render() {
